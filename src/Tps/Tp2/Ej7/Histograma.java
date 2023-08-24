@@ -2,6 +2,8 @@ package Tps.Tp2.Ej7;
 
 public class Histograma {
 
+
+
     public static void main(String[] args) {
 
         int[] intervals = new int[10];
