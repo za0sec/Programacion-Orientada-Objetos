@@ -10,8 +10,21 @@
 
 package Tps.Tp3.Ej7;
 
-public class SavingsAccount {
-    private Integer balance;
-    private Integer id;
+public class SavingsAccount extends BankAccount{
+
+    @Override
+    protected boolean canExtract(double num) {
+        return (getBalance() - num) > 0;
+    }
+
+    public SavingsAccount(int id, double balance) {
+        super(id, balance);
+    }
+    public SavingsAccount(int id) {
+        super(id);
+    }
+
+
+
 
 }

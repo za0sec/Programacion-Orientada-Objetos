@@ -5,11 +5,15 @@ public class CheckingAccount extends BankAccount{
 
     @Override
     protected boolean canExtract(double num) {
-
-
+        return true;
     }
 
-    public CheckingAccount(Integer id, Integer balance) {
+    public CheckingAccount(int id, double balance) {
         super(id, balance);
     }
+
+    public CheckingAccount(int id) {
+        super(id);
+    }
+
 }
