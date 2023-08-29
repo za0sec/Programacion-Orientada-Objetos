@@ -10,7 +10,6 @@ public class FriendPromotion {
 
     public FriendPromotion(){
         friends = new ArrayList<>(MAX_FRIENDS);
-        this.discount = 0.2;
     }
 
     public boolean addFriend(String name){

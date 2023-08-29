@@ -6,6 +6,8 @@ public class CellPhoneBill {
     private String number;
     protected Call[] calls;
     protected int callsIndex;
+    private FriendPromotion promotion;
+
 
     private static final int DEFAULT_SIZE = 10;
 
@@ -32,6 +34,11 @@ public class CellPhoneBill {
         }
         return total;
     }
+
+    public void setFriendPromotion(FriendPromotion promotion) {
+        this.promotion = promotion;
+    }
+
 
     private void resize() {
         calls = Arrays.copyOf(calls, calls.length + DEFAULT_SIZE);
