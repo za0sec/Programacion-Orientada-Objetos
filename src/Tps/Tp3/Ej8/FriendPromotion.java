@@ -1,5 +1,5 @@
 package Tps.Tp3.Ej8;
-import java.util.ArrayList;
+import java.util.ArrayList; //Este ejercicio esta mal porque no se puede usar esto la concha de la lora!
 public class FriendPromotion {
 
     public static final int MAX_FRIENDS = 3;
