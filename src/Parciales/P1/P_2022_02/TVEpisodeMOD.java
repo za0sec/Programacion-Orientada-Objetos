@@ -1,6 +1,6 @@
-package Parciales.P1.P_2022_02;
+/*package Parciales.P1.P_2022_02;
 
-public class TVEpisode/*mod*/ implements Comparable<TVEpisode>{
+public class TVEpisode/*mod implements Comparable<TVEpisode>{
 
     private final int id;
     private final String title;
@@ -44,3 +44,4 @@ public class TVEpisode/*mod*/ implements Comparable<TVEpisode>{
 
 
 }
+*/

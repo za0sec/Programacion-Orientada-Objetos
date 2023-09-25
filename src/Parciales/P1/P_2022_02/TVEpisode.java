@@ -1,4 +1,4 @@
-package Parciales.P1.P_2022_02;
+/*package Parciales.P1.P_2022_02;
 
 public class TVEpisode {
     private final int id;
@@ -30,3 +30,4 @@ public class TVEpisode {
     }
 }
 
+*/

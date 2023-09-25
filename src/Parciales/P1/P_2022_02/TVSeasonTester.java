@@ -1,4 +1,4 @@
-package Parciales.P1.P_2022_02;
+/*package Parciales.P1.P_2022_02;
 
 import java.time.LocalDate;
 
@@ -40,4 +40,4 @@ public class TVSeasonTester {
         // (234) Episode 0_hellofriend.mov aired on 2022-09-19 has 8.50 rating
     }
 }
-
+*/
