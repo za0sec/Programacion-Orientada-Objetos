@@ -1,7 +1,8 @@
-/*package Parciales.P1.P_2022_02;
+package Parciales.P1.P_2022_02.Ej1;
 
-public class TVEpisode/*mod implements Comparable<TVEpisode>{
+import java.time.LocalDate;
 
+public class TVEpisode implements Comparable<TVEpisode> {
     private final int id;
     private final String title;
     private final double rating;
@@ -32,16 +33,11 @@ public class TVEpisode/*mod implements Comparable<TVEpisode>{
 
     @Override
     public String toString() {
-        return String.format("(%d) Episode %s aired on %s has %.2f rating", id, title, airedDate, rating);
+        return String.format("(%d) Epsiode %s on %s has %.2f rating", id, title, airedDate, rating);
     }
 
     @Override
     public int compareTo(TVEpisode o) {
         return Integer.compare(this.id, o.id);
     }
-
 }
-
-
-}
-*/

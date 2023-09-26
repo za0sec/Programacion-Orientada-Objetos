@@ -1,4 +1,6 @@
 package Parciales.P1.PracticaFranco.Ej2;
+import java.util.NoSuchElementException;
+
 public class ParallelIteratorTester {
 
     public static void main(String[] args) {
