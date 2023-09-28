@@ -12,7 +12,7 @@ public class Loan {
 
     public Loan(Reciever rec, double amount, int statements, LocalDate dateIssue){
         this.rec = rec;
-        if (rec.getAmount() < amount || rec.getMaxStatement() < statements){
+        if (!rec.CheckThings(amount, statements)){
             throw new LoanException("Invalid Loan.");
         }
         this.amount = amount;
@@ -31,7 +31,7 @@ public class Loan {
 
     @Override
     public String toString(){
-        return String.format("%s Loan of %.2f. Remaining quota: %d.", rec.getName(), amount, currentStatements);
+        return String.format("%s Loan of %.2f. Remaining quota: %d.", rec, amount, currentStatements);
     }
 
 }

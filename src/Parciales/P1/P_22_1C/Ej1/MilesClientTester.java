@@ -6,7 +6,7 @@ public class MilesClientTester {
 
     public static void main(String[] args) {
         // El cliente "Chuck" se suscribe por 4 meses al plan Club 2000
-        MilesClient chuck = new MilesClient("Chuck", 4, PlanMiles.CLUB2000);
+        MilesClient chuck = new MilesClient("Chuck", 4, MilePlans.CLUB2000);
         // Se imprime el extracto de cada mes del cliente "Chuck"
         // para todos los meses suscriptos
         // Por el plan elegido los 2 primeros meses tendrá millas bonus
@@ -16,7 +16,7 @@ public class MilesClientTester {
         System.out.println("##########");
 
         // El cliente "Sarah" se suscribe por 2 meses al plan Club 1000
-        MilesClient sarah = new MilesClient("Sarah", 2, PlanMiles.CLUB1000);
+        MilesClient sarah = new MilesClient("Sarah", 2, MilePlans.CLUB1000);
         // Se imprime el extracto de cada mes del cliente "Sarah"
         // para todos los meses suscriptos
         Iterator<String> sarahIt = sarah.iterator();
@@ -34,7 +34,7 @@ public class MilesClientTester {
         System.out.println("##########");
 
         // El cliente "Morgan" se suscribe por 6 meses al plan Club 5000
-        MilesClient morgan = new MilesClient("Morgan", 6, PlanMiles.CLUB5000);
+        MilesClient morgan = new MilesClient("Morgan", 6, MilePlans.CLUB5000);
         // Se imprime el extracto de cada mes del cliente "Morgan"
         // para los 4 primeros meses
         // Por el plan elegido los 5 primeros meses tendrá millas bonus
