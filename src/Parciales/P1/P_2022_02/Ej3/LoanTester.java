@@ -11,7 +11,7 @@ public class LoanTester {
         // que indica las cuotas pendientes
         // donde no se pueden hacer más de 3 pagos
         // y las fechas de los mismos deben ser posteriores a la fecha del préstamo
-        Loan l1 = new ......................................................................
+        Loan l1 = new Loan(Reciever.PERSONAL, 1000, 3, LocalDate.of(2022,9,1));
         System.out.println(l1); // PERSONAL Loan of $1000. Remaining quota: 3.
         // Se paga la cuota 1 con fecha 1/10/2022
         l1.pay(1, LocalDate.of(2022, 10, 1)); // Paying quota 1 on date 2022-10-01.
@@ -38,8 +38,8 @@ public class LoanTester {
         // donde no se pueden hacer más de 3 pagos
         // y los mismos deben realizarse en orden consecutivo
         // y las fechas de los mismos deben ser posteriores a la fecha del préstamo
-        Loan l2 = new ......................................................................
-        System.out.println(l2); // VEHICLE Loan of $2000. Remaining quota: 3. Last quota: 0.
+        Loan l2 = new LoanLastStatement(Reciever.VEHICLE, 2000, 3, LocalDate.of(2022,9,1));
+;        System.out.println(l2); // VEHICLE Loan of $2000. Remaining quota: 3. Last quota: 0.
         l2.pay(1, LocalDate.of(2022, 10, 1)); // Paying quota 1 on date 2022-10-01.
         System.out.println(l2); // VEHICLE Loan of $2000. Remaining quota: 2. Last quota: 1.
         try {
@@ -60,7 +60,7 @@ public class LoanTester {
         // y los mismos deben realizarse en orden consecutivo
         // y las fechas de los mismos deben ser posteriores a la fecha del préstamo
         // y también posteriores a la fecha del último pago
-        Loan l3 = new ......................................................................
+        Loan l3 = new DateStatement(Reciever.HOME, 3000, 3,  LocalDate.of(2022, 9, 1));
         System.out.println(l3);
         // HOME Loan of $3000. Remaining quota: 3. Last quota: 0. Next PayDate: After 2022-09-01.
         l3.pay(1, LocalDate.of(2022, 10, 1)); // Paying quota 1 on date 2022-10-01.
@@ -80,7 +80,7 @@ public class LoanTester {
         try {
             // Ocurre un error pues al instanciar un préstamo (de cualquier tipo)
             // el monto (75.000) supera el máximo (50.000) del destinatario (PERSONAL)
-            new ..................................................
+            new Loan(Reciever.PERSONAL, 75000, 3, LocalDate.of(2022,9,1));
         } catch (LoanException ex) {
             System.out.println(ex.getMessage()); // Invalid Loan.
         }
@@ -88,7 +88,7 @@ public class LoanTester {
         try {
             // Ocurre un error pues al instanciar un préstamo (de cualquier tipo)
             // la cantidad de cuotas (30) supera el máximo (24) del destinatario (VEHICLE)
-            new ..................................................
+            new Loan(Reciever.VEHICLE, 1000, 30, LocalDate.of(2022,9,1));
         } catch (LoanException ex) {
             System.out.println(ex.getMessage()); // Invalid Loan.
         }
