@@ -6,17 +6,19 @@ public class StockResult {
 
     private String name;
     private int amount;
+    private boolean status = false;
 
     public StockResult(String name, int amount) {
         this.name = name;
         this.amount = amount;
     }
 
+
     public Integer getAmount(){
         return amount;
     }
 
-    private boolean status = false;
+
 
     public void changeStatus(boolean status){
         this.status = status;

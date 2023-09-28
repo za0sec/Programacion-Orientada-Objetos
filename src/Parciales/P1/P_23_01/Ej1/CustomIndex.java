@@ -30,7 +30,7 @@ public class CustomIndex<T> implements Iterable<T>{
 
     @Override
     public Iterator<T> iterator() {
-        return new Iterator<>() {
+        return new Iterator<T>() {
             private int current = start;
             private final UnaryOperator<Integer> itNextIndex = nextIndex;
             @Override

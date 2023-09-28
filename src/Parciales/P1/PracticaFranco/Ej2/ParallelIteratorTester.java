@@ -1,4 +1,4 @@
-package Parciales.P1.PracticaFranco.Ej2;
+/*package Parciales.P1.PracticaFranco.Ej2;
 import java.util.NoSuchElementException;
 
 public class ParallelIteratorTester {
@@ -34,4 +34,4 @@ public class ParallelIteratorTester {
     }
 
 }
-
+*/
