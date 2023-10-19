@@ -3,11 +3,14 @@ package Parciales.P1.P_22_1C.Ej1;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
+
 public class MilesClient implements Iterable<String>{
-    private final String name;
-    private final int months;
-    private final PlanMiles plan;
-    public MilesClient(String name, int months, PlanMiles plan) {
+
+    private String name;
+    private int months;
+    private MilePlans plan;
+
+    public MilesClient(String name, int months, MilePlans plan){
         this.name = name;
         this.months = months;
         this.plan = plan;
@@ -15,21 +18,18 @@ public class MilesClient implements Iterable<String>{
 
     @Override
     public Iterator<String> iterator() {
-        return new Iterator<>() {
-            private int currentMonth = 1;
+        return new Iterator<>(){
+            int month = 0;
             @Override
-            public boolean hasNext() {
-                return currentMonth <= months;
+            public boolean hasNext(){
+                return month < months;
             }
-
             @Override
-            public String next() {
+            public String next(){
                 if (!hasNext()){
                     throw new NoSuchElementException();
                 }
-                String ret = String.format("Client %s: Month %d earned %d miles for $%.2f", name, months, plan.getMiles(currentMonth), plan.getCost());
-                currentMonth++;
-                return ret;
+                return String.format("Client %s Month %d earned %d miles for %.2f", name, ++month, plan.getMiles(month), plan.getCost());
             }
         };
     }
