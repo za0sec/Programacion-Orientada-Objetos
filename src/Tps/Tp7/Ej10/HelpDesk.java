@@ -1,6 +1,6 @@
 package Tps.Tp7.Ej10;
 
-import java.util.*;//PREGUNTAR
+import java.util.*;
 
 public class HelpDesk {
 
@@ -22,15 +22,7 @@ public class HelpDesk {
 
     private HelpTicket actualTicket;
 
-    private Comparator<ClientType> customComparator = new Comparator<ClientType>() {
-        @Override
-        public int compare(ClientType o1, ClientType o2) {
-            List<ClientType> customOrder = Arrays.asList(ClientType.GOVERNMENT, ClientType.BUSINESS, ClientType.RESIDENTIAL);
-
-            return Integer.compare(customOrder.indexOf(o1), customOrder.indexOf(o2));
-        }
-    };
-    Map<ClientType, ArrayList<HelpTicket>> myMap = new TreeMap<>(customComparator);
+    Map<ClientType, ArrayList<HelpTicket>> myMap = new TreeMap<>();
 
     public HelpDesk openTicket(ClientType type, String from, String question){
 
