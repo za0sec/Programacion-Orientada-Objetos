@@ -7,6 +7,8 @@ import java.util.Map;
 public class SimpleArrayList<E> extends ArrayList<E> implements SimpleList<E>{
 
 //PREGUNTAR PORQUE SI ACA DEFINO  UN HASHMAP SE CREA UN BUCLE.
+SimpleList<E> myList = new SimpleArrayList<>();
+
 
     @Override
     public <K> Map<K, E> toMap(Operation<E, K> operation) {

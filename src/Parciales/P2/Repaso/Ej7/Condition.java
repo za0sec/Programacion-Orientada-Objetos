@@ -28,5 +28,4 @@ public enum Condition {
 
     public abstract LocalDate addDate(LocalDate date);
 
-
 }

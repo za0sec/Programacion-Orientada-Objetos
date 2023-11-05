@@ -8,7 +8,6 @@ import java.util.function.Predicate;
 public class FilteredKeyMapIterator<K,V> implements Iterator<K> {
 
     private K actualKey;
-
     private Map<K,V> map;
     private Predicate<K> pred;
     private final Iterator<Map.Entry<K,V>> it;

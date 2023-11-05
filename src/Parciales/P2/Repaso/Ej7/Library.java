@@ -7,7 +7,7 @@ import java.util.NoSuchElementException;
 
 public class Library {
 
-    Map<String, BookInfo> bookInfo = new HashMap<>();
+    Map<String, BookInfo> bookInfo = new HashMap<>(); //Uso map pero no uso @override de hash. Porque? Cuando debo hacerlo?
     Map<Person, Loan> loans = new HashMap<>();
 
     public Library addBook(String name, int stock){
